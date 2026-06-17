@@ -1,0 +1,4 @@
+pdfplumber
+requests
+pydub
+imageio-ffmpeg

@@ -1,0 +1,29 @@
+Prompt for vocabulary extraction
+
+I have a vocabulary study PDF. Extract all vocabulary entries into a plain .txt file using this exact format:
+
+[Topic Title]
+
+[word] ([part of speech])
+[definition in English]
+[example sentence 1]
+[example sentence 2]
+[example sentence 3]
+...
+
+Rules:
+- Add a blank line before each new word/phrase entry
+- Keep ALL example sentences from the original (lesson, business, legal, social, etc.)
+- Remove: the document title/header, page numbers, source credits, Czech translations, section labels (e.g. "Group 1", "Lesson:", "Business:"), word family tables, study tips, and exam tips
+- Do not add any labels, prefixes, or commentary — just the word, its part of speech, definition, then sentences
+- Preserve phrasal verbs and idioms in the same format as single words
+- Expand all part-of-speech abbreviations in the output:
+  - adj.      -> adjective
+  - n / n.    -> noun
+  - v / v.    -> verb
+  - adv.      -> adverb
+  - prep.     -> preposition
+  - conj.     -> conjunction
+  - phr. verb -> phrasal verb
+  - idiom     -> idiom
+  - phrase    -> phrase
