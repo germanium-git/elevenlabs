@@ -41,6 +41,18 @@ python pdf2practice.py file.txt --repeat 2 --speed 0.8 --rotate-voices -o practi
 
 The text file is one sentence per line. Blank lines and lines starting with `#` are ignored.
 
+### Examples
+
+```bash
+# Slower conversion with repetition
+python pdf2practice.py management_styles_vocabulary.txt \
+--repeat 2 \
+--pause-unit 2000 \
+--pause-words 800 \
+--speed 0.75
+```
+
+
 ## One-shot workflow
 
 ```bash

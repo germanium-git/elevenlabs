@@ -1,1 +1,5 @@
 .venv
+*.mp3
+*.txt
+!vocabulary_extraction_prompt.txt
+!requirements.txt
