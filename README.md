@@ -10,6 +10,23 @@ pip install -r requirements.txt
 export ELEVENLABS_API_KEY=sk_xxx   # elevenlabs.io -> Profile icon -> API Key
 ```
 
+## Better extraction via Claude (recommended for complex PDFs)
+
+The built-in PDF extractor works for most Linguahouse sheets, but for tricky layouts
+you can get a cleaner result using Claude:
+
+1. Open [claude.ai](https://claude.ai) in your browser and start a new conversation.
+2. Attach the PDF using the paperclip button.
+3. Paste the contents of `vocabulary_extraction_prompt.txt` as your message and send it.
+4. Copy Claude's reply and save it as a `.txt` file (e.g. `file.txt`).
+5. Feed it straight to the script:
+   ```bash
+   python pdf2practice.py file.txt --repeat 2 --speed 0.8 --rotate-voices -o practice.mp3
+   ```
+
+This produces one sentence per line with expanded part-of-speech labels and no
+Czech translations — exactly the format the script expects.
+
 ## Recommended two-step workflow
 
 ```bash
